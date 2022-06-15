@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      color: #888888;
+      font-family: 'EB Garamond', serif;
+      display: grid;
+      place-items: center;
+    }
+    html{
+      overflow-y: hidden;
+    }
+    .container{
+      background-color: #a1a1a1;
+      color: #6b2f70;
+      border-width: thick;
+      border-style: double;
+    }
+    .center{
+      color: #2e50ad;
+      font-family:'Times New Roman', Times, serif;
+      text-align: center;
+      display: grid;
+      height: 100vh;
+      place-items: center;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <form method="POST" action={% url 'cadastro' %}>
+        <h3>
+          {% csrf_token %}
+        {{ form }}
+        </h3>
+        <button type="submit">
+          Enviar
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
