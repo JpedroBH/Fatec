@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      background-color: rgb(255, 255, 255);
+
+    }
+   .container{
+    text-align: center;
+    border: 4px dotted black;
+   }
+
+
+
+   button[type="submit"]{
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      margin-bottom: 10px;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <form method="POST" action={% url 'cadastro' %}>
+        <h3>
+          {% csrf_token %}
+        {{ form }}
+        </h3>
+        <button type="submit">
+          Cadastrar
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

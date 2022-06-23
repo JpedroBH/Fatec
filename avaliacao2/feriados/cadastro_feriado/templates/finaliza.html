@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      text-align: center;
+
+    }
+    a{
+    text-decoration: none;
+    color:black;
+    background-color: white;
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+   }
+   a:hover{
+    background-color: black;
+    color:white;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <div>
+        <h1>
+        Feriado {{ feriado.nome }} - {{ feriado.data }} cadastrado.
+      </h1>
+      <h3>
+        <a href="/">Inicio</a>
+      </h3>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

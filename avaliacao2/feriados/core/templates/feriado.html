@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   .container{
+    text-align: center;
+    margin: auto auto;
+    border: 1px solid black;
+    width: 50%;
+    margin: 0 auto;
+    background-color: lightgray;
+    opacity: 0.8;
+    
+   }
+   a{
+    text-decoration: none;
+    color:black;
+    background-color: white;
+    width: 100px;
+    height: 200px;
+    border-radius: 10px;
+   }
+   a:hover{
+    background-color: black;
+    color:white;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+        <h1>
+          {% for msg in msgs %}
+            <p>{{ msg }}</p>
+          {% endfor %}
+        </h1>
+        <h3>
+          <a href="/cadastro">Cadastre um feriado!</a>
+        </h3>
+  </div>
+</body>
+</html>
